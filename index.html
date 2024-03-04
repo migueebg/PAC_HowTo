@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Madimi+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <title>LM Y SI PAC 3</title>
+    <header>
+        <h1>Maquinas virtuales en VirtualBox</h1>
+    </header>
+    <main>
+        <nav>
+            <li><a href="#descargas">Descargar VirtualBox</a></li>
+            <li><a href="#apartado1">1.- Descarga de las isos necesarias.</a></li>
+            <li><a href="#apartado2">2.- Instalación de las maquinas virtuales.</a></li>
+            <li><a href="#apartado3">3.- Instalación de la maquina Windows.</a></li>
+            <li><a href="#apartado4">4.- Instalacion de la maquina Ubuntu.<a></li>
+            <li><a href="#apartado5">5.- Configuración de la red NAT.</a></li>
+            <li><a href="#apartado6">6.- Configuración de la máquina Ubuntu.</a></li>
+            <li><a href="#apartado7">7.- Configuración de la máquina Windows 10.</a></li>
+            <li><a href="#apartado8">8.- Comprobación de las máquinas con ping.</a></li>
+            <li><a href="#apartado9">9.- Acceder a la carpeta compartida.</a></li>
+        </nav>
+        <article id="descargas">
+            <h3>Descargar VirtualBox</h3>
+            <div class="button" data-tooltip="106MB">
+                <a href="https://download.virtualbox.org/virtualbox/7.0.14/VirtualBox-7.0.14-161095-Win.exe" id="descarga-virtualbox">
+                    <div class="button-wrapper">
+                        <div class="text">VirtualBox</div>
+                        <span class="icon">
+                            <svg aria-hidden="true" role="img" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"></path></svg>
+                        </span>
+                    </div>
+                </a>
+            </div>
+            
+        </article>
+        <article id="apartado1">
+            <h3>Descarga de las isos necesarias.</h3>
+            <p>Para descargar las isos te dejo dos botones en la parte inferior del texto.</p>
+            <p>Iso Windows 10: </p><br>
+            <p>Para descargar la iso de Windows 10 debemos instalar la herramienta de Microsoft que te dejo en el boton de abajo:</p>
+            <div class="button" data-tooltip="18,8MB">
+                <a href="https://go.microsoft.com/fwlink/?LinkId=691209" id="descarga-isos">
+                    <div class="button-wrapper">
+                        <div class="text">Windows 10</div>
+                        <span class="icon">
+                            <svg xmlns="" aria-hidden="true" role="img" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"></path></svg>
+                        </span>
+                    </div>
+                </a>
+            </div>
+            <br>
+            <p>Iso Ubuntu: </p>
+            <div class="button" data-tooltip="4,7GB">
+                <a href="https://releases.ubuntu.com/22.04.4/ubuntu-22.04.4-desktop-amd64.iso?_gl=1*1yut1he*_gcl_au*MzUyMTI3MjQ0LjE3MDk1NjYxNTc.&_ga=2.167389246.166787579.1709566006-1760955989.1709566006" id="descarga-isos">
+                    <div class="button-wrapper">
+                        <div class="text">Ubuntu</div>
+                        <span class="icon">
+                            <svg xmlns="" aria-hidden="true" role="img" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"></path></svg>
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </article>
+        <article id="apartado2">
+            <h3>Instalacion de las maquinas virtuales.</h3>
+            <p>Para instalar las maquinas virtuales debemos abrir VirtualBox y darle al icono azul donde pone "nueva".</p>
+            <img src="imagenes/1windows.png">
+        </article>
+        <article id="apartado3">
+            <h3>Instalación de la maquina Windows.</h3>
+            <p>Primeros vamos a instalar la maquina Windows para ello le introducimos el nombre y le damos a siguiente.</p>
+            <img src="imagenes/2windows.png">
+            <p>Y los demas pasos los elegimos según las especificaciones de tu ordenador real, pero puedes dejar la configuración por defecto.</p>
+            <p>Para añadir la iso iniciamos la máquina y nos pedira una iso. Busca la ruta donde la hayas descargado y la seleccionas, a continuación comenzara la instalación.</p>
+            <img src="imagenes/3windows.png">
+            <p>Seguimos los pasos predeterminados de la instalación.</p>
+            <img src="imagenes/4windows.png">
+            <p>Le damos a instalación personalizada y a continuación nos saldra donde queremos instalar el sistema operativo.</p>
+            <img src="imagenes/5windows.png">
+            <p>Seleccionamos nuevo y le damos a siguiente.</p>
+            <p>Una vez terminada la instalación podemos eliminar la iso del almacenamiento de nuestra maquina.</p>
+            <p>Y continuamos la instalación hasta el final.</p>
+            <img src="imagenes/8windows.png">
+            <p>Y ya tendriamos la maquina instalada.</p>
+        </article>
+        <article id="apartado4">
+            <h3>Instalación de la máquina Ubuntu.</h3>
+            <p>Añadimos la iso a la máquina y al darle a siguiente establecemos un nombre de usuario y una contraseña.</p>
+            <img src="imagenes/1ubuntu.png">
+            <img src="imagenes/2ubuntu.png">
+            <p>Los siguientes pasos le damos todo a siguiente y esperamos a que se inicie la máquina.</p>
+            <img src="imagenes/3ubuntu.png">
+            <p>Una vez se instale quitamos la iso del almacenamiento y volvemos a iniciar la máquina.</p>
+            <img src="imagenes/4ubuntu.png">
+        </article>
+        <article id="apartado5">
+            <h3>Configuración de la red NAT.</h3>
+            <p>En las herramientas de virtualbox clicamos en los 3 puntos y clicamos en "Red".</p>
+            <img src="imagenes/red-virtualbox.png">
+            <p>Clicamos en "Redes NAT" y pulsamos en "crear"</p>
+            <img src="imagenes/rednat.png">
+            <p>A continuación vamos a agregarle esa red NAT a nuestras dos máquinas virtuales.</p>
+            <img src="imagenes/rednatconfg.png">
+        </article>
+        <article id="apartado6">
+            <h3>Configuración de la máquina Ubuntu.</h3>
+            <p>Abrimos la terminal y ponemos "apt Update" y "apt Upgrade" para actualizar los repositorios de la máquina. Puede que sea necesario hacerlo como super usuario, para ello pon "su" e introduce la contraseña de administrador.</p>
+            <img src="imagenes/actualizarUbuntu.png">
+            <img src="imagenes/actualizarUbuntu2.png">
+            <p>A continuación instalamos samba con el comando "apt-get install samba"</p>
+            <img src="imagenes/sambaIns.png">
+            <p>Una vez instalado vamos a crear la carpeta que queremos compartir con el comando "mkdir" y la crearemos en "/home/" en tu perfil de usuario.</p>
+            <img src="imagenes/creaCompartida.png">
+            <p>Y vamos a editar el archivo de configuración de samba para añadir nuestra carpeta, con el comando sudo nano "/etc/samba/smb.conf".</p>
+            <img src="imagenes/sambaconf.png">
+            <p>Nos dirigiremos al final del archivo y crearemos una escructura igual a esta con el nombre de tu carpeta y la ruta de la misma.</p>
+            <img src="imagenes/sambaconf2.png">
+            <p>Una vez ya la hayamos añadido al archivo salimos con las teclas "ctr + x" pulsamos la "Y" y le damos enter.</p>
+            <p>Ahora crearemos un usuario con el que podran acceder a nuestra carpeta con el comando "smbpasswd -a miguel" sustituyendo miguel por el nombre de tu usuario, y nos pedira una contraseña.</p>
+            <img src="imagenes/sambaconf3.png">
+            <p>Una vez ya lo hayamos creado, vamos a reiniciar el servicio para aplicar todos los cambios con el comando "/etc/init.d/smbd restart" recuerda siempre hacerlo como administrador o con el comando "sudo" delante.</p>
+            <img src="imagenes/sambaconf4.png">
+            <p>Por ultimo vamos a crear un archivo de prueba en nuestra carpeta compartida con el comando "touch" en la ruta de nuestra carpeta.</p>
+            <img src="imagenes/sambaconf5.png">
+        </article>
+        <article id="apartado7">
+            <h3>Configuración de la máquina Windows 10.</h3>
+            <p>Para empezar iremos a la configuración de red y clicaremos en centro de redes y recursos compartidos.</p>
+            <img src="imagenes/windowsconf.png">
+            <p>Luego pulsaremos en cambiar configuración de uso compartido avanzado.</p>
+            <img src="imagenes/windowsconf2.png">
+            <p>Y tendrás que tener la configuración como las siguientes imagenes:</p>
+            <img src="imagenes/windowsconf3.png">
+            <img src="imagenes/windowsconf4.png">
+            <img src="imagenes/windowsconf5.png">
+        </article id="aprtado8">
+        <article>
+            <h3>Comprobación de las máquinas con ping.</h3>
+            <p>Vamos a hacer un ping desde cualquiera de las dos máquinas para comprobar que se comunican y que estan en la misma red.</p>
+            <video controls width="640" height="360">
+                <source src="video/Comprobación-ping.mp4" type="video/mp4">
+            </video>
+        </article>
+        <article id="apartado9">
+            <h3>Acceder a la carpeta compartida.</h3>
+            <p>Para acceder a la carpeta nos situaremos en nuestra maquina windows y pulsaremos las teclas "win + r" y ponemos la ip de la maquina Ubuntu.</p>
+            <img src="imagenes/winr.png">
+            <p>Le damos a aceptar y se nos abrira un explorador de archivos con nuestra carpeta compartida.</p>
+            <img src="imagenes/compCarpeta.png">
+            <p>Y al abrirla veremos el archivo que creamos en Ubuntu.</p>
+            <img src="imagenes/compCarpeta1.png">
+        </article>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-links">
+                    <h4>Compañía</h4>
+                    <ul>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Nuestros servicios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Ayuda</h4>
+                    <ul>
+                        <li><a href="#">Preguntas</a></li>
+                        <li><a href="#">Compras</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Tienda</h4>
+                    <ul>
+                        <li><a href="#">Ropa</a></li>
+                        <li><a href="#">Zapatos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Siguenos</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
